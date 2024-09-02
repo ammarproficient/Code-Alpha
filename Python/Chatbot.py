@@ -1,4 +1,4 @@
-import nltk
+# import nltk for download purpose
 from nltk.chat.util import Chat, reflections
 
 # Uncomment and run this line if you haven't downloaded NLTK's 'punkt' tokenizer
@@ -11,45 +11,52 @@ pairs = [
     ],
 
     [
-        r"what is your name ?",
+        r"what is your name ?|your name",
         ["My name is FUN Chatbot.",]
     ],
 
     [
-        r"how are you ?",
+        r"how are you ?|what about you",
         ["I'm doing good. How about you?",]
     ],
 
+    # Asking age of Chatbot
     [
         r"(what is your age ?|how old are you ?|what age are you ?|tell me your age ?)",
         ["I'm a chatbot, created by Ammar.", ]
     ],
 
+    # Code Alpha Website
     [
-        r"(what is the code alpha website ?|do you know the code alpha website ?)",
+        r"(what is the code alpha website ?|code alpha website|do you know the code alpha website ?)",
         ["Yes, I know the Code Alpha website. Here it is: https://www.codealpha.tech/", ]
     ],
 
+    # Code Alpha Internships
     [
-        r"does code alpha offer internships ?",
+        r"does code alpha offer internships ?|code alpha internships",
         ["Yes, Code Alpha offers internships. You can check the details on their website: https://www.codealpha.tech/internship.html", ]
     ],
 
+    # Types of Code Alpha Internships
     [
-        r"(what types of internships does code alpha offer ?|can you tell me about code alpha internships ?)",
+        r"(what types of internships does code alpha offer ?|types of code alpha internships|can you tell me about code alpha internships ?)",
         ["Code Alpha offers various internships, including software development, data science, and marketing. For more details, visit https://www.codealpha.tech/internship.html", ]
     ],
 
+    # Code Alpha Courses
     [
-        r"(what courses does code alpha offer ?|do you know about code alpha courses ?)",
+        r"(what courses does code alpha offer ?|types of code alpha courses|do you know about code alpha courses ?)",
         ["Code Alpha offers a range of courses in software development, data science, and other tech-related fields. Check their website for more information: https://www.codealpha.tech/#courses", ]
     ],
 
+    # Code Alpha Courses Link
     [
         r"(where can I find code alpha's course catalog ?|how can I view code alpha's courses ?)",
         ["You can view Code Alpha's course catalog on their website at https://www.codealpha.tech/#courses", ]
     ],
 
+    # Code Alpha Location
     [
         r"(do you know code alpha ?|where is code alpha located ?|I want to know about code alpha|what is the location of code alpha office ?|where is the code alpha office ?)",
         ["Yes, I know Code Alpha. It's a software company located in Lucknow, India.", ]
@@ -89,7 +96,7 @@ reflections = {
 }
 
 def chatbot():
-    print("Hi! I am a simple NLTK chatbot. Type 'bye' to exit.")
+    print('Hello I am your Chatbot. Type "Bye Bye" to exit.')
 
     chat = Chat(pairs, reflections)
 
